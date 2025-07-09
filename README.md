@@ -32,4 +32,6 @@ To get a summary of all accessed registers and memory locations and the executes
 
 ### Fault Injection
 
-TBD: Fault injection, fault coverage analysis, etc.
+To run a demo fault injection batch job, you can run the following command:
+
+`qemu-system-riscv32 -M sifive_e -kernel /files/C-ADD.elf -device terminator,address=0x80000000 -test-setup /files/qemu.testsetup -mutant-list /files/C-ADD.mutants`
